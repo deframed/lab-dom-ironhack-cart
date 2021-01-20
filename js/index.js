@@ -1,9 +1,31 @@
 // ITERATION 1
 
-function updateSubtotal(product) {
-  console.log('Calculating subtotal, yey!');
+// console.log('Hello, I\'m working')
 
-  //... your code goes here
+function updateSubtotal(product) {
+  
+  console.log('Calculating subtotal, yey!')
+
+  const price = product.querySelector(".price span").innerHTML
+  let quantity = product.querySelector(".quantity value")
+  
+  
+
+  console.log(price)
+  console.log(quantity)
+  
+
+
+  let subtotal = product.querySelector(".subtotal span").innerHTML
+
+  console.log(subtotal)
+
+  // why doesnt it do the math & print????
+  
+  subtotal = quantity * price
+  return subtotal
+
+  
 }
 
 function calculateAll() {
@@ -39,4 +61,9 @@ window.addEventListener('load', () => {
   calculatePricesBtn.addEventListener('click', calculateAll);
 
   //... your code goes here
+  
+ let product = document.querySelector(".product")
+  updateSubtotal(product)
+
+  
 });
